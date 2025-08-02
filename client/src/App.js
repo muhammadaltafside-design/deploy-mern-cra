@@ -4,7 +4,8 @@ function App() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
-    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    // const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    const apiUrl = "https://mern-cra-backend.onrender.com"; // Hard coding for testing purpose
     fetch(`${apiUrl}/api/test`)
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
